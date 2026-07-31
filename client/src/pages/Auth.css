@@ -1,0 +1,213 @@
+/* ── Futuristic Auth Page ── */
+.futuristic-auth {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.auth-bg-pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.leaf-lines {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--brand-100) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.5;
+}
+
+.gradient-sphere {
+  position: absolute;
+  top: -10%; right: -10%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, var(--brand-100) 0%, transparent 70%);
+  filter: blur(80px);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ── Futuristic Loader ── */
+.futuristic-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-leaf-spinner {
+  width: 120px; height: 120px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--brand-500);
+}
+
+.seed-ring {
+  position: relative;
+  width: 120px; height: 120px;
+}
+
+.seed-dot {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 8px; height: 10px;
+  border-radius: 40% 40% 50% 50%;
+  background: var(--slate-300);
+}
+
+.loading-text {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--slate-600);
+  letter-spacing: 0.05em;
+}
+
+/* ── Futuristic Form ── */
+.auth-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.auth-title-futuristic {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  margin-top: 1rem;
+}
+
+.auth-sub-futuristic {
+  font-size: 0.95rem;
+  color: var(--slate-500);
+  margin-top: 0.5rem;
+}
+
+.form-group-futuristic {
+  margin-bottom: 1.25rem;
+}
+
+.input-wrap-futuristic {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  border: 1.5px solid var(--slate-100);
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.input-wrap-futuristic:focus-within {
+  border-color: var(--brand-500);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.input-wrap-futuristic input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--slate-900);
+}
+
+.input-wrap-futuristic svg {
+  color: var(--slate-400);
+}
+
+.btn-futuristic-primary {
+  width: 100%;
+  padding: 1.1rem;
+  background: var(--brand-500);
+  color: #fff;
+  border-radius: 16px;
+  border: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1rem;
+}
+
+.btn-futuristic-primary:hover {
+  transform: scale(1.02);
+  background: var(--brand-600);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+}
+
+.auth-divider {
+  display: flex; align-items: center; gap: 1rem;
+  margin: 2rem 0;
+  color: var(--slate-400); font-size: 0.8rem; text-transform: uppercase;
+}
+.auth-divider::before, .auth-divider::after { content:''; flex:1; height:1px; background: var(--slate-100); }
+
+.social-auth-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+}
+
+.social-btn {
+  padding: 0.8rem;
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-size: 0.9rem; font-weight: 600; color: var(--slate-700);
+  transition: all 0.2s;
+}
+.social-btn:hover { background: var(--slate-50); border-color: var(--slate-300); }
+
+.demo-shortcuts {
+  display: flex; gap: 1rem; margin-top: 1.5rem;
+}
+.demo-shortcuts button {
+  flex: 1; font-size: 0.8rem; color: var(--brand-600); font-weight: 600;
+  background: var(--brand-50); border: none; padding: 0.5rem; border-radius: 8px;
+  transition: all 0.2s;
+}
+.demo-shortcuts button:hover { background: var(--brand-100); }
+
+.auth-footer-futuristic {
+  display: flex; align-items: center; justify-content: center; gap: 1rem;
+  margin-top: 2rem; font-size: 0.9rem;
+}
+.auth-footer-futuristic a { color: var(--brand-600); font-weight: 600; text-decoration: none; }
+.dot-sep { width: 4px; height: 4px; background: var(--slate-300); border-radius: 50%; }
+
+/* ── Role Toggle Futuristic ── */
+.role-toggle-futuristic {
+  display: flex; gap: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--slate-100);
+  border-radius: 14px; padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+.role-toggle-futuristic button {
+  flex: 1; padding: 0.75rem;
+  border-radius: 10px; font-size: 0.9rem; font-weight: 700;
+  background: transparent; color: var(--slate-500);
+  border: none; transition: all 0.2s;
+}
+.role-toggle-futuristic button.active {
+  background: #ffffff;
+  color: var(--brand-700);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 480px) {
+  .auth-card { padding: 1.5rem; }
+  .register-grid { grid-template-columns: 1fr; }
+  .register-grid .span-2 { grid-column: span 1; }
+}

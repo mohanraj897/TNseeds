@@ -1,0 +1,88 @@
+.onboarding-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.animation-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.agri-svg {
+  width: 280px;
+  height: 280px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+.sunlight-glow {
+  position: absolute;
+  top: 10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(253, 224, 71, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+.onboarding-text {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.app-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  letter-spacing: -0.02em;
+  margin: 0;
+  background: linear-gradient(to bottom, var(--brand-600), var(--brand-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: #10b981;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* Atmosphere effects */
+.onboarding-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 80%);
+  pointer-events: none;
+}

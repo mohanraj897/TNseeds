@@ -1,0 +1,106 @@
+.cinematic-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+.atmosphere {
+  position: absolute;
+  inset: 0;
+  transition: background 2s ease;
+}
+
+.sunrise-glow {
+  position: absolute;
+  top: 15%;
+  color: rgba(253, 224, 71, 0.2);
+  filter: blur(40px);
+}
+
+.animation-stage {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.soil-layer {
+  position: absolute;
+  bottom: 100px;
+  width: 300px;
+  height: 40px;
+}
+
+.soil-surface {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #3d2b1f, #261a12);
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.dust-particles {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.dust {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #5c4033;
+  border-radius: 50%;
+}
+
+.rain-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background: rgba(16, 185, 129, 0.3);
+  border-radius: 2px;
+  left: calc(20% + 60% * var(--rand));
+}
+
+.seed-object {
+  width: 16px;
+  height: 22px;
+  background: #8b4513;
+  border-radius: 40% 40% 50% 50%;
+  box-shadow: inset -2px -2px 4px rgba(0,0,0,0.3);
+}
+
+.sprout-object {
+  position: relative;
+  color: var(--brand-500);
+}
+
+.sprout-icon {
+  filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.3));
+}
+
+.transform-center {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.final-logo {
+  text-align: center;
+}

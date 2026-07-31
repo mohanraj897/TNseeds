@@ -1,0 +1,76 @@
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex; align-items: center; gap: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 800;
+  color: var(--slate-900);
+}
+.logo-icon {
+  width: 42px; height: 42px;
+  background: var(--brand-500);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+.logo-text span { color: var(--brand-500); }
+
+/* Actions */
+.navbar-actions { display: flex; align-items: center; gap: 1rem; }
+.desktop-only { display: flex; }
+.mobile-only  { display: none; }
+
+.user-chip {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: var(--slate-100);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem; color: var(--slate-700);
+  font-weight: 500;
+}
+
+.role-pill {
+  font-size: 0.7rem; font-weight: 700;
+  padding: 0.2rem 0.6rem; border-radius: 999px;
+  text-transform: uppercase;
+}
+.role-pill.dealer { background: var(--brand-100); color: var(--brand-700); }
+.role-pill.farmer { background: #fff7ed; color: #9a3412; }
+
+/* Mobile */
+.menu-toggle {
+  background: transparent; border: none;
+  color: var(--text-primary); padding: 0.4rem;
+  border-radius: 8px;
+}
+.menu-toggle:hover { background: var(--bg-elevated); }
+
+.mobile-menu {
+  display: flex; flex-direction: column; gap: 0.75rem;
+  padding: 1rem; border-top: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+.mobile-user-info {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.9rem; color: var(--text-secondary);
+  padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .desktop-only { display: none; }
+  .mobile-only  { display: flex; }
+}

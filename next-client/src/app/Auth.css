@@ -1,0 +1,105 @@
+/* Shared Auth Page Styles */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 2.5rem 1rem;
+  background:
+    radial-gradient(circle at top left, var(--brand-50), transparent),
+    radial-gradient(circle at bottom right, #fff7ed, transparent),
+    var(--bg-base);
+}
+
+.auth-card {
+  width: 100%; max-width: 440px;
+  background: #ffffff;
+  border: 1px solid var(--slate-200);
+  border-radius: 28px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.08);
+}
+.auth-card-wide { max-width: 600px; }
+
+/* Logo */
+.auth-logo {
+  display: flex; align-items: center; gap: 0.75rem; justify-content: center;
+  font-family: var(--font-display); font-size: 1.6rem; font-weight: 800;
+  color: var(--slate-900); margin-bottom: 2rem;
+}
+.auth-logo-icon {
+  width: 48px; height: 48px;
+  background: var(--brand-500);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+
+.auth-title {
+  text-align: center; font-size: 1.75rem; font-weight: 800;
+  margin-bottom: 0.5rem; color: var(--slate-900);
+}
+.auth-sub {
+  text-align: center; font-size: 0.95rem; color: var(--slate-500);
+  margin-bottom: 2rem; line-height: 1.6;
+}
+
+/* Role Toggle */
+.role-toggle {
+  display: flex; gap: 0.5rem;
+  background: var(--slate-100);
+  border-radius: 14px; padding: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+.role-btn {
+  flex: 1; padding: 0.65rem;
+  border-radius: 10px; font-size: 0.9rem; font-weight: 700;
+  background: transparent; color: var(--slate-600);
+  transition: all 0.2s;
+  border: none; cursor: pointer;
+}
+.role-btn.active {
+  background: #ffffff;
+  color: var(--brand-700);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Form */
+.auth-form {
+    display: flex; flex-direction: column; gap: 1.25rem;
+}
+.input-icon-wrap {
+    position: relative; display: flex; align-items: center;
+}
+.input-icon {
+    position: absolute; left: 1rem; color: var(--slate-400);
+}
+.form-input.padded {
+    padding-left: 2.8rem;
+    width: 100%;
+}
+.pw-toggle {
+    position: absolute; right: 1rem; background: transparent; border: none;
+    color: var(--slate-400); cursor: pointer;
+}
+
+/* Demo buttons */
+.demo-btns { display: flex; gap: 0.6rem; margin: 0.5rem 0; }
+.demo-btn  { flex: 1; justify-content: center; }
+
+/* Footer */
+.auth-footer {
+  text-align: center; margin-top: 1.25rem;
+  font-size: 0.88rem; color: var(--text-secondary);
+}
+.auth-link {
+  color: var(--brand-500); font-weight: 600;
+  transition: color 0.15s;
+}
+.auth-link:hover { color: var(--brand-600); }
+
+@media (max-width: 480px) {
+  .auth-card { padding: 1.75rem 1.25rem; }
+  .register-grid { grid-template-columns: 1fr; }
+  .register-grid .span-2 { grid-column: span 1; }
+}
