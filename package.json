@@ -3,13 +3,22 @@
   "version": "1.0.0",
   "description": "AgriCart – Seed Availability Platform",
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run dealer\" \"npm run next-client\"",
     "server": "cd server && npm run dev",
     "client": "cd client && npm run dev",
+    "dealer": "cd dealer && npm run dev",
+    "next-client": "cd next-client && npm run dev",
     "seed": "cd server && node seed.js",
-    "install:all": "npm install --prefix server && npm install --prefix client"
+    "install:all": "npm install --prefix server && npm install --prefix client && npm install --prefix dealer && npm install --prefix next-client"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@react-oauth/google": "^0.13.5",
+    "axios": "^1.19.0",
+    "google-auth-library": "^11.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "jwt-decode": "^4.0.0"
   }
 }
