@@ -25,3 +25,4 @@ export default function AgriLogo({ size = "md", animated = true }) {
     </div>
   )
 }
+//first login page logo

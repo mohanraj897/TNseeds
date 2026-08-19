@@ -5,7 +5,7 @@ import CinematicAnimation from '../components/CinematicAnimation'
 import AgriLogo from '../components/AgriLogo'
 import { ChevronDown, ArrowRight, ShieldCheck, Zap, Globe, Users } from 'lucide-react'
 import './LandingPage.css'
-
+//homepage
 export default function LandingPage() {
   const [showIntro, setShowIntro] = useState(true)
   const { scrollYProgress } = useScroll()

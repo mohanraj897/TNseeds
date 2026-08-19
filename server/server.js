@@ -16,7 +16,7 @@ const server = http.createServer(app);
 // Socket.io setup
 const io = new Server(server, {
   cors: {
-    origin: ['http://localhost:5173', 'http://localhost:3000'],
+    origin: ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:5174'],
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
   }
 });
@@ -26,7 +26,7 @@ app.set('io', io);
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:5174'],
   credentials: true
 }));
 app.use(express.json());

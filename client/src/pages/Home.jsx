@@ -194,7 +194,7 @@ export default function Home({ showForm, setShowForm }) {
             Auto-Sync Active
           </div>
           <div className="status-item desktop-only">
-            <Globe size={14} />
+            <RefreshCw size={14} />
             Local Node: India-West-01
           </div>
         </div>
