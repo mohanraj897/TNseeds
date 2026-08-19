@@ -4,7 +4,7 @@ import { AuthProvider, useAuth } from './context/AuthContext'
 import { ToastProvider } from './context/ToastContext'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import Login from './pages/Login'
+import Login from './pages/login/Login'
 import Register from './pages/Register'
 
 // Protected route wrapper (redirect if not logged in)
@@ -34,6 +34,7 @@ function AppInner() {
         <Route path="/welcome"  element={<LandingPage />} />
         <Route path="/login"    element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/home" element={<Home />} />
         <Route path="*"         element={<Navigate to={user ? "/" : "/welcome"} replace />} />
       </Routes>
     </BrowserRouter>
